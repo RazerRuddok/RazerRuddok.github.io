@@ -191,6 +191,117 @@
       .shadow-header {
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
       }
+      /* Общий контейнер для текстового блока */
+      .text-block {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Стили для заголовков внутри текстового блока */
+      .text-block h2 {
+        font-size: 2em;
+        color: #333;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      /* Стили для параграфов внутри текстового блока */
+      .text-block p {
+        font-size: 1em;
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 15px;
+        text-align: justify;
+      }
+
+      /* Стили для изображений внутри текстового блока */
+      .text-block img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 15px 0;
+      }
+
+      /* Стили для ссылок внутри текстового блока */
+      .text-block a {
+        color: #007bff;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .text-block a:hover {
+        color: #0056b3;
+      }
+      .gradient-header {
+        background: linear-gradient(90deg, #007bff, #00c6ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Дополнительные стили для заголовков с тенью */
+      .shadow-header {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      }
+      .container {
+        display: flex;
+        justify-content: center; /* Выравнивает по горизонтали */
+        align-items: center; /* Выравнивает по вертикали */
+        min-height: 100vh; /*  Занимает всю высоту viewport, важно для вертикального центрирования */
+      }
+      img {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        width: 150px;
+      }
+      .text-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap; /* позволяет адаптировать блоки на меньших экранах */
+        margin: 20px 0;
+      }
+
+      .text-block {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 30%; /* Ширина блока (можно изменять для адаптивности) */
+        margin: 10px; /* Отступ между блоками */
+        text-align: center;
+        transition: transform 0.3s; /* Анимация при наведении */
+      }
+
+      .text-block:hover {
+        transform: scale(1.05); /* Увеличение при наведении */
+      }
+
+      .text-block img {
+        width: 100%;
+        height: auto; /* Поддержка соотношения сторон */
+      }
+
+      .text-block h3 {
+        font-size: 1.5em;
+        color: #333;
+        margin: 10px 0;
+      }
+
+      .text-block p {
+        font-size: 1em;
+        color: #555;
+        padding: 0 10px 10px; /* Отступ внутри блока */
+      }
+      .container {
+        display: flex;
+        justify-content: center; /* Выравнивает по горизонтали */
+        align-items: center; /* Выравнивает по вертикали */
+        min-height: 100vh; /*  Занимает всю высоту viewport, важно для вертикального центрирования */
+      }
     </style>
   </head>
   <body>
@@ -205,6 +316,7 @@
           <li><a href="about.html">О ресторане</a></li>
           <li><a href="gallery.html">Галерея</a></li>
           <li><a href="contact.html">Контакты</a></li>
+ 
         </ul>
       </nav>
     </header>
@@ -219,23 +331,16 @@
           >Заказать доставку</a
         >
       </section>
-    </main>
-
-    <div class="modal delivery-modal">
-      <div class="modal-content">
-        <span class="close-delivery-modal">&times;</span>
-        <h2>Забронировать столик</h2>
-        <form>
-          <label for="name">Имя:</label>
-          <input type="text" id="name" name="name" required />
-
-          <label for="phone">Телефон:</label>
-          <input type="tel" id="phone" name="phone" required />
-
-          <button type="submit">Забронировать</button>
-        </form>
-      </div>
-    </div>
+      <div class="container">
+      <div class="text-block">
+        <h3>Контакты</h3>
+        <p>
+          Почта: restfuturum@mail.ru
+        </p>
+        <p>
+        Телефон: 89206319425
+        </p>
+      </div></div>
     <br /><br /><br /><br /><br /><br />
     <footer>
       <p>&copy; 2023 Futurum. Все права защищены.</p>
